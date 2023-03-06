@@ -26,6 +26,13 @@ function App() {
     },
   ];
 
+
+  const addExpenseHandler = expense =>{
+    console.log("IN APP.JS");
+    console.log(expense);
+
+  }
+
   // Asagidaki return funksiyasinin alternativini yazirig
 
   // return React.createElement(
@@ -35,10 +42,12 @@ function App() {
   //   React.createElement(Expenses,{items: expenses})
   // );
 
+
+
   
   return (
     <div className="App">
-      <NewExpense/> 
+      <NewExpense onAddExpense={addExpenseHandler} /> 
      <Expenses data={expenses}/>
     </div>
   );
